@@ -1,5 +1,10 @@
 package sigilize
 
+import (
+	"regexp"
+	"strings"
+)
+
 func removeVowels(text []string) string {
 	r := regexp.MustCompile("[aeiou]")
 	return r.ReplaceAllString(strings.Join(text, ""), "")
